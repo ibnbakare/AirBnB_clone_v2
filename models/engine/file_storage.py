@@ -66,6 +66,8 @@ class FileStorage:
                     self.__objects[key] = value
         except FileNotFoundError:
             pass
+    def close(self):
+        self.reload()
 
     def delete(self, obj=None):
         """ delete an existing element
